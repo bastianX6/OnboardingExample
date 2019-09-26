@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		03983719233D7DDE00A60862 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 03983717233D7DDE00A60862 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		03983747233D81C300A60862 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03983746233D81C300A60862 /* CoordinatorProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		03983714233D7DDE00A60862 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		03983717233D7DDE00A60862 /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		03983718233D7DDE00A60862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03983746233D81C300A60862 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +48,19 @@
 		03983716233D7DDE00A60862 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				03983745233D81B400A60862 /* Coordinator */,
 				03983717233D7DDE00A60862 /* Core.h */,
 				03983718233D7DDE00A60862 /* Info.plist */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		03983745233D81B400A60862 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				03983746233D81C300A60862 /* CoordinatorProtocol.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +106,7 @@
 				TargetAttributes = {
 					03983713233D7DDE00A60862 = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
 					};
 				};
 			};
@@ -131,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03983747233D81C300A60862 /* CoordinatorProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +273,7 @@
 		0398371D233D7DDE00A60862 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 48L72N5ZP6;
@@ -276,6 +290,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = bastianx6.Core;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -284,6 +299,7 @@
 		0398371E233D7DDE00A60862 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 48L72N5ZP6;
