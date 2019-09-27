@@ -6,14 +6,17 @@
 //  Copyright © 2019 Bastián Véliz Vega. All rights reserved.
 //
 
+import Core
 import UIKit
 
-public class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, Coordinable {
     @IBOutlet var userTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var loginButton: UIButton!
 
-    public init() {
+    var coordinator: Coordinator?
+
+    init() {
         super.init(nibName: "LoginViewController", bundle: Bundle(for: LoginViewController.self))
     }
 
@@ -22,7 +25,7 @@ public class LoginViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    public override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

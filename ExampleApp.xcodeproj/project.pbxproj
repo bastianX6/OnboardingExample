@@ -13,6 +13,12 @@
 		039836C8233D7A9000A60862 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039836C6233D7A9000A60862 /* Main.storyboard */; };
 		039836CA233D7A9100A60862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 039836C9233D7A9100A60862 /* Assets.xcassets */; };
 		039836CD233D7A9100A60862 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039836CB233D7A9100A60862 /* LaunchScreen.storyboard */; };
+		03983751233D83C800A60862 /* Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0398373F233D7E1C00A60862 /* Login.framework */; };
+		03983752233D83C800A60862 /* Login.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0398373F233D7E1C00A60862 /* Login.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		03983754233D83D500A60862 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03983724233D7DDF00A60862 /* Core.framework */; };
+		03983755233D83D500A60862 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03983724233D7DDF00A60862 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		03983759233D841500A60862 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03983758233D841500A60862 /* MainCoordinator.swift */; };
+		0398375C233D847500A60862 /* LoginModuleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0398375B233D847500A60862 /* LoginModuleCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +52,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		03983753233D83C800A60862 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				03983752233D83C800A60862 /* Login.framework in Embed Frameworks */,
+				03983755233D83D500A60862 /* Core.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		039836BD233D7A9000A60862 /* ExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		039836C0233D7A9000A60862 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +80,8 @@
 		03983704233D7C8900A60862 /* Permissions.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Permissions.xcodeproj; path = Permissions/Permissions.xcodeproj; sourceTree = "<group>"; };
 		0398371F233D7DDE00A60862 /* Core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Core.xcodeproj; path = Core/Core.xcodeproj; sourceTree = "<group>"; };
 		0398373A233D7E1B00A60862 /* Login.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Login.xcodeproj; path = Login/Login.xcodeproj; sourceTree = "<group>"; };
+		03983758233D841500A60862 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		0398375B233D847500A60862 /* LoginModuleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModuleCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +89,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03983751233D83C800A60862 /* Login.framework in Frameworks */,
+				03983754233D83D500A60862 /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +106,7 @@
 				039836E9233D7C3800A60862 /* Onboarding.xcodeproj */,
 				039836BF233D7A9000A60862 /* ExampleApp */,
 				039836BE233D7A9000A60862 /* Products */,
+				03983750233D83C800A60862 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +121,7 @@
 		039836BF233D7A9000A60862 /* ExampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				03983756233D83FA00A60862 /* Coordinator */,
 				039836C0233D7A9000A60862 /* AppDelegate.swift */,
 				039836C2233D7A9000A60862 /* SceneDelegate.swift */,
 				039836C4233D7A9000A60862 /* ViewController.swift */,
@@ -138,6 +165,38 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		03983750233D83C800A60862 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		03983756233D83FA00A60862 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				0398375A233D845400A60862 /* Modules */,
+				03983757233D840200A60862 /* Main */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		03983757233D840200A60862 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				03983758233D841500A60862 /* MainCoordinator.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		0398375A233D845400A60862 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				0398375B233D847500A60862 /* LoginModuleCoordinator.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -148,6 +207,7 @@
 				039836B9233D7A9000A60862 /* Sources */,
 				039836BA233D7A9000A60862 /* Frameworks */,
 				039836BB233D7A9000A60862 /* Resources */,
+				03983753233D83C800A60862 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -258,7 +318,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0398375C233D847500A60862 /* LoginModuleCoordinator.swift in Sources */,
 				039836C5233D7A9000A60862 /* ViewController.swift in Sources */,
+				03983759233D841500A60862 /* MainCoordinator.swift in Sources */,
 				039836C1233D7A9000A60862 /* AppDelegate.swift in Sources */,
 				039836C3233D7A9000A60862 /* SceneDelegate.swift in Sources */,
 			);
