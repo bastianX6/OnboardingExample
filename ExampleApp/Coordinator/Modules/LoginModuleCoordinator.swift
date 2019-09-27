@@ -29,5 +29,14 @@ final class LoginModuleCoordinator: Coordinator {
         }
     }
 
-    func route(to _: NavigationRoute, animated _: Bool) {}
+    func route(to navigationRoute: NavigationRoute, animated: Bool) {
+        guard let loginRoute = navigationRoute as? LoginExternalRoutes else {
+            preconditionFailure("navigationRoute must be a LoginExternalRoutes value")
+        }
+
+        switch loginRoute {
+        case .onboarding:
+            self.rootCoordinator?.route(to: MainRoutes.onboarding, animated: animated)
+        }
+    }
 }

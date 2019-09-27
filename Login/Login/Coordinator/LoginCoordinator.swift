@@ -10,6 +10,14 @@ import Core
 import Foundation
 import UIKit
 
+enum LoginRoutes: NavigationRoute {
+    case nextView
+}
+
+public enum LoginExternalRoutes: NavigationRoute {
+    case onboarding
+}
+
 public final class LoginCoordinator: Coordinator {
     public var rootCoordinator: Coordinator?
     public weak var rootViewController: UIViewController?
@@ -30,5 +38,14 @@ public final class LoginCoordinator: Coordinator {
         completion()
     }
 
-    public func route(to _: NavigationRoute, animated _: Bool) {}
+    public func route(to navigationRoute: NavigationRoute, animated: Bool) {
+        guard let loginRoute = navigationRoute as? LoginRoutes else {
+            preconditionFailure("navigationRoute must be a LoginRoutes value")
+        }
+
+        switch loginRoute {
+        case .nextView:
+            self.rootCoordinator?.route(to: LoginExternalRoutes.onboarding, animated: animated)
+        }
+    }
 }

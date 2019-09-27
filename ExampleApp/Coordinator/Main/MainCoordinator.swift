@@ -9,6 +9,11 @@
 import Core
 import UIKit
 
+enum MainRoutes: NavigationRoute {
+    case onboarding
+    case logout
+}
+
 final class MainCoordinator: Coordinator {
     var rootCoordinator: Coordinator?
     weak var rootViewController: UIViewController?
@@ -28,5 +33,15 @@ final class MainCoordinator: Coordinator {
         }
     }
 
-    func route(to _: NavigationRoute, animated _: Bool) {}
+    func route(to navigationRoute: NavigationRoute, animated _: Bool) {
+        guard let mainRoute = navigationRoute as? MainRoutes else {
+            preconditionFailure("navigationRoute must be a MainRoutes value")
+        }
+        switch mainRoute {
+        case .onboarding:
+            break
+        case .logout:
+            break
+        }
+    }
 }
