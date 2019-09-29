@@ -31,7 +31,11 @@ class LocationPermissionViewController: UIViewController, Routable, PermissionsS
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func didAcceptPermisson(_: UIButton) {}
+    @IBAction func didAcceptPermisson(_: UIButton) {
+        PermissionUtils.setPermissionStatus(enabled: true, permission: .location)
+    }
 
-    @IBAction func didRejectPermisson(_: UIButton) {}
+    @IBAction func didRejectPermisson(_: UIButton) {
+        PermissionUtils.setPermissionStatus(enabled: false, permission: .location)
+    }
 }

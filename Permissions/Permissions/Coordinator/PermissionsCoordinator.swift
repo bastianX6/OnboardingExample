@@ -13,13 +13,21 @@ enum PermissionsRoutes: NavigationRoute {
     case push
     case location
     case photos
+    case nextFlow
 }
 
 final class PermissionsCoordinator: RoutableCoordinator {
     var rootCoordinator: RoutableCoordinator?
     var rootViewController: UIViewController?
 
+    private var navigationController: UINavigationController? {
+        return self.rootViewController as? UINavigationController
+    }
+
     func start(_ completion: @escaping () -> Void) {
+        let welcomeVC = PermissionsWelcomeViewController()
+        welcomeVC.router = self
+        self.navigationController?.setViewControllers([welcomeVC], animated: true)
         completion()
     }
 
@@ -27,13 +35,20 @@ final class PermissionsCoordinator: RoutableCoordinator {
         guard let route = navigationRoute as? PermissionsRoutes else {
             preconditionFailure("navigationRoute must be a PermissionsRoutes value")
         }
-        let animated = animated
         switch route {
         case .push:
-            break
+            let pushVC = PushPermissionViewController()
+            pushVC.router = self
+            self.navigationController?.setViewControllers([pushVC], animated: animated)
         case .location:
-            break
+            let locationVC = LocationPermissionViewController()
+            locationVC.router = self
+            self.navigationController?.setViewControllers([locationVC], animated: animated)
         case .photos:
+            let photosVC = PhotosPermissionViewController()
+            photosVC.router = self
+            self.navigationController?.setViewControllers([photosVC], animated: animated)
+        case .nextFlow:
             break
         }
     }

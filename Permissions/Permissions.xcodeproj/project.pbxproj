@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0308FBBC234156C8003FB0CA /* PermissionUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0308FBBB234156C8003FB0CA /* PermissionUtils.swift */; };
+		0308FBC0234158C5003FB0CA /* PermissionsWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0308FBBE234158C5003FB0CA /* PermissionsWelcomeViewController.swift */; };
+		0308FBC1234158C5003FB0CA /* PermissionsWelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0308FBBF234158C5003FB0CA /* PermissionsWelcomeViewController.xib */; };
 		039836FE233D7C8900A60862 /* Permissions.h in Headers */ = {isa = PBXBuildFile; fileRef = 039836FC233D7C8900A60862 /* Permissions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03A724C12341503700270633 /* PermissionsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A724C02341503700270633 /* PermissionsCoordinator.swift */; };
 		03A724CA234150A100270633 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A724C9234150A100270633 /* Core.framework */; };
@@ -35,6 +38,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0308FBBB234156C8003FB0CA /* PermissionUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionUtils.swift; sourceTree = "<group>"; };
+		0308FBBE234158C5003FB0CA /* PermissionsWelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsWelcomeViewController.swift; sourceTree = "<group>"; };
+		0308FBBF234158C5003FB0CA /* PermissionsWelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PermissionsWelcomeViewController.xib; sourceTree = "<group>"; };
 		039836F9233D7C8900A60862 /* Permissions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Permissions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		039836FC233D7C8900A60862 /* Permissions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Permissions.h; sourceTree = "<group>"; };
 		039836FD233D7C8900A60862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,6 +67,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0308FBBA234156B2003FB0CA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0308FBBB234156C8003FB0CA /* PermissionUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		0308FBBD234158AE003FB0CA /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				0308FBBE234158C5003FB0CA /* PermissionsWelcomeViewController.swift */,
+				0308FBBF234158C5003FB0CA /* PermissionsWelcomeViewController.xib */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
 		039836EF233D7C8900A60862 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +104,7 @@
 		039836FB233D7C8900A60862 /* Permissions */ = {
 			isa = PBXGroup;
 			children = (
+				0308FBBA234156B2003FB0CA /* Utils */,
 				03A724CD2341517200270633 /* Screens */,
 				03A724BF2341502400270633 /* Coordinator */,
 				039836FC233D7C8900A60862 /* Permissions.h */,
@@ -108,6 +132,7 @@
 		03A724CD2341517200270633 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				0308FBBD234158AE003FB0CA /* Welcome */,
 				03A724D02341519300270633 /* PushPermission */,
 				03A724CF2341518A00270633 /* LocationPermission */,
 				03A724CE2341517A00270633 /* PhotosPermission */,
@@ -214,6 +239,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0308FBC1234158C5003FB0CA /* PermissionsWelcomeViewController.xib in Resources */,
 				03A724D82341522800270633 /* LocationPermissionViewController.xib in Resources */,
 				03A724D4234151B300270633 /* PushPermissionViewController.xib in Resources */,
 				03A724DC2341527A00270633 /* PhotosPermissionViewController.xib in Resources */,
@@ -227,9 +253,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0308FBBC234156C8003FB0CA /* PermissionUtils.swift in Sources */,
 				03A724DB2341527A00270633 /* PhotosPermissionViewController.swift in Sources */,
 				03A724DE2341535900270633 /* PermissionsScreenProtocols.swift in Sources */,
 				03A724C12341503700270633 /* PermissionsCoordinator.swift in Sources */,
+				0308FBC0234158C5003FB0CA /* PermissionsWelcomeViewController.swift in Sources */,
 				03A724D3234151B300270633 /* PushPermissionViewController.swift in Sources */,
 				03A724D72341522800270633 /* LocationPermissionViewController.swift in Sources */,
 			);

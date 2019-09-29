@@ -30,7 +30,11 @@ class PhotosPermissionViewController: UIViewController, Routable, PermissionsScr
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func didAcceptPermisson(_: UIButton) {}
+    @IBAction func didAcceptPermisson(_: UIButton) {
+        PermissionUtils.setPermissionStatus(enabled: true, permission: .photos)
+    }
 
-    @IBAction func didRejectPermisson(_: UIButton) {}
+    @IBAction func didRejectPermisson(_: UIButton) {
+        PermissionUtils.setPermissionStatus(enabled: false, permission: .photos)
+    }
 }
