@@ -13,6 +13,7 @@ enum MainRoutes: NavigationRoute {
     case onboarding
     case logout
     case permissions
+    case dashboard
 }
 
 final class MainCoordinator: RoutableCoordinator {
@@ -42,9 +43,11 @@ final class MainCoordinator: RoutableCoordinator {
         case .onboarding:
             break
         case .logout:
-            break
+            self.routeToLogin()
         case .permissions:
             self.routeToPermissions()
+        case .dashboard:
+            self.routeToDashboard()
         }
     }
 
@@ -56,5 +59,23 @@ final class MainCoordinator: RoutableCoordinator {
         let coordinator = PermissionsModuleCoordinator(rootViewController: rootViewController)
         coordinator.rootCoordinator = self
         coordinator.start {}
+    }
+
+    private func routeToLogin() {
+        guard let rootViewController = self.rootViewController else {
+            preconditionFailure("RootViewController is nil")
+        }
+        let loginCoordinator = LoginModuleCoordinator(rootViewController: rootViewController)
+        loginCoordinator.rootCoordinator = self
+        loginCoordinator.start {}
+    }
+
+    private func routeToDashboard() {
+        guard let rootViewController = self.rootViewController else {
+            preconditionFailure("RootViewController is nil")
+        }
+        let dashboardCoordinator = DashboardModuleCoordinator(rootViewController: rootViewController)
+        dashboardCoordinator.rootCoordinator = self
+        dashboardCoordinator.start {}
     }
 }

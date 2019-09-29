@@ -24,7 +24,7 @@ public final class PermissionsCoordinator: RoutableCoordinator {
     private var permissions: [PermissionsRoutes] = [.push, .location, .photos]
 
     public var rootCoordinator: RoutableCoordinator?
-    public var rootViewController: UIViewController?
+    public weak var rootViewController: UIViewController?
 
     private var navigationController: UINavigationController? {
         return self.rootViewController as? UINavigationController

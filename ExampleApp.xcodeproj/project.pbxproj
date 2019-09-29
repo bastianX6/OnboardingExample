@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0308FBC323415A2A003FB0CA /* PermissionsModuleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0308FBC223415A2A003FB0CA /* PermissionsModuleCoordinator.swift */; };
+		0308FBE823416842003FB0CA /* Dashboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0308FBE2234166C7003FB0CA /* Dashboard.framework */; };
+		0308FBE923416842003FB0CA /* Dashboard.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0308FBE2234166C7003FB0CA /* Dashboard.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		039836C1233D7A9000A60862 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039836C0233D7A9000A60862 /* AppDelegate.swift */; };
 		039836C3233D7A9000A60862 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039836C2233D7A9000A60862 /* SceneDelegate.swift */; };
 		039836C5233D7A9000A60862 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039836C4233D7A9000A60862 /* ViewController.swift */; };
@@ -22,9 +24,17 @@
 		0398375C233D847500A60862 /* LoginModuleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0398375B233D847500A60862 /* LoginModuleCoordinator.swift */; };
 		03A724C32341506900270633 /* Permissions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03983709233D7C8900A60862 /* Permissions.framework */; };
 		03A724C42341506900270633 /* Permissions.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03983709233D7C8900A60862 /* Permissions.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		03ECDB8923416B5B000F564D /* DashboardModuleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03ECDB8823416B5B000F564D /* DashboardModuleCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0308FBE1234166C7003FB0CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0308FBDD234166C6003FB0CA /* Dashboard.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0308FBD2234166C6003FB0CA;
+			remoteInfo = Dashboard;
+		};
 		039836ED233D7C3900A60862 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 039836E9233D7C3800A60862 /* Onboarding.xcodeproj */;
@@ -65,6 +75,7 @@
 				03983752233D83C800A60862 /* Login.framework in Embed Frameworks */,
 				03A724C42341506900270633 /* Permissions.framework in Embed Frameworks */,
 				03983755233D83D500A60862 /* Core.framework in Embed Frameworks */,
+				0308FBE923416842003FB0CA /* Dashboard.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,6 +84,7 @@
 
 /* Begin PBXFileReference section */
 		0308FBC223415A2A003FB0CA /* PermissionsModuleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsModuleCoordinator.swift; sourceTree = "<group>"; };
+		0308FBDD234166C6003FB0CA /* Dashboard.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Dashboard.xcodeproj; path = Dashboard/Dashboard.xcodeproj; sourceTree = "<group>"; };
 		039836BD233D7A9000A60862 /* ExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		039836C0233D7A9000A60862 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		039836C2233D7A9000A60862 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +99,7 @@
 		0398373A233D7E1B00A60862 /* Login.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Login.xcodeproj; path = Login/Login.xcodeproj; sourceTree = "<group>"; };
 		03983758233D841500A60862 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		0398375B233D847500A60862 /* LoginModuleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModuleCoordinator.swift; sourceTree = "<group>"; };
+		03ECDB8823416B5B000F564D /* DashboardModuleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardModuleCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,15 +110,25 @@
 				03983751233D83C800A60862 /* Login.framework in Frameworks */,
 				03A724C32341506900270633 /* Permissions.framework in Frameworks */,
 				03983754233D83D500A60862 /* Core.framework in Frameworks */,
+				0308FBE823416842003FB0CA /* Dashboard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0308FBDE234166C6003FB0CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0308FBE2234166C7003FB0CA /* Dashboard.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		039836B4233D7A9000A60862 = {
 			isa = PBXGroup;
 			children = (
+				0308FBDD234166C6003FB0CA /* Dashboard.xcodeproj */,
 				0398373A233D7E1B00A60862 /* Login.xcodeproj */,
 				0398371F233D7DDE00A60862 /* Core.xcodeproj */,
 				03983704233D7C8900A60862 /* Permissions.xcodeproj */,
@@ -200,6 +223,7 @@
 			children = (
 				0398375B233D847500A60862 /* LoginModuleCoordinator.swift */,
 				0308FBC223415A2A003FB0CA /* PermissionsModuleCoordinator.swift */,
+				03ECDB8823416B5B000F564D /* DashboardModuleCoordinator.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -257,6 +281,10 @@
 					ProjectRef = 0398371F233D7DDE00A60862 /* Core.xcodeproj */;
 				},
 				{
+					ProductGroup = 0308FBDE234166C6003FB0CA /* Products */;
+					ProjectRef = 0308FBDD234166C6003FB0CA /* Dashboard.xcodeproj */;
+				},
+				{
 					ProductGroup = 0398373B233D7E1B00A60862 /* Products */;
 					ProjectRef = 0398373A233D7E1B00A60862 /* Login.xcodeproj */;
 				},
@@ -277,6 +305,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		0308FBE2234166C7003FB0CA /* Dashboard.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Dashboard.framework;
+			remoteRef = 0308FBE1234166C7003FB0CA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		039836EE233D7C3900A60862 /* Onboarding.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -326,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0398375C233D847500A60862 /* LoginModuleCoordinator.swift in Sources */,
+				03ECDB8923416B5B000F564D /* DashboardModuleCoordinator.swift in Sources */,
 				039836C5233D7A9000A60862 /* ViewController.swift in Sources */,
 				03983759233D841500A60862 /* MainCoordinator.swift in Sources */,
 				0308FBC323415A2A003FB0CA /* PermissionsModuleCoordinator.swift in Sources */,

@@ -1,16 +1,16 @@
 //
-//  LoginModuleCoordinator.swift
+//  DashboardModuleCoordinator.swift
 //  ExampleApp
 //
-//  Created by Bastián Véliz Vega on 9/26/19.
+//  Created by Bastián Véliz Vega on 9/29/19.
 //  Copyright © 2019 Bastián Véliz Vega. All rights reserved.
 //
 
 import Core
-import Login
+import Dashboard
 import UIKit
 
-final class LoginModuleCoordinator: RoutableCoordinator {
+final class DashboardModuleCoordinator: RoutableCoordinator {
     var rootCoordinator: RoutableCoordinator?
     weak var rootViewController: UIViewController?
 
@@ -22,21 +22,21 @@ final class LoginModuleCoordinator: RoutableCoordinator {
         guard let rootViewController = self.rootViewController else {
             preconditionFailure("RootViewController is nil")
         }
-        let internalCoordinator = LoginCoordinator(rootCoordinator: self, rootViewController: rootViewController)
+        let internalCoordinator = DashboardCoordinator(rootCoordinator: self, rootViewController: rootViewController)
         internalCoordinator.rootCoordinator = self
         internalCoordinator.start {
             completion()
         }
     }
 
-    func route(to navigationRoute: NavigationRoute, animated: Bool) {
-        guard let loginRoute = navigationRoute as? LoginExternalRoutes else {
-            preconditionFailure("navigationRoute must be a LoginExternalRoutes value")
+    func route(to navigationRoute: NavigationRoute, animated _: Bool) {
+        guard let route = navigationRoute as? DashboardExternalRoutes else {
+            preconditionFailure("navigationRoute must be a PermissionsExternalRoutes value")
         }
 
-        switch loginRoute {
-        case .onboarding:
-            self.rootCoordinator?.route(to: MainRoutes.dashboard, animated: animated)
+        switch route {
+        case .logout:
+            self.rootCoordinator?.route(to: MainRoutes.logout, animated: true)
         }
     }
 }

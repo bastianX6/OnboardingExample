@@ -12,7 +12,7 @@ import UIKit
 
 final class PermissionsModuleCoordinator: RoutableCoordinator {
     var rootCoordinator: RoutableCoordinator?
-    var rootViewController: UIViewController?
+    weak var rootViewController: UIViewController?
 
     init(rootViewController: UIViewController) {
         self.rootViewController = rootViewController
