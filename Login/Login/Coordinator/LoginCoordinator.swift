@@ -18,11 +18,11 @@ public enum LoginExternalRoutes: NavigationRoute {
     case onboarding
 }
 
-public final class LoginCoordinator: Coordinator {
-    public var rootCoordinator: Coordinator?
+public final class LoginCoordinator: RoutableCoordinator {
+    public var rootCoordinator: RoutableCoordinator?
     public weak var rootViewController: UIViewController?
 
-    public init(rootCoordinator: Coordinator, rootViewController: UIViewController) {
+    public init(rootCoordinator: RoutableCoordinator, rootViewController: UIViewController) {
         self.rootCoordinator = rootCoordinator
         self.rootViewController = rootViewController
     }
@@ -33,7 +33,7 @@ public final class LoginCoordinator: Coordinator {
 
     public func start(_ completion: @escaping () -> Void) {
         let loginViewController = LoginViewController()
-        loginViewController.coordinator = self
+        loginViewController.router = self
         self.navigationController?.setViewControllers([loginViewController], animated: false)
         completion()
     }

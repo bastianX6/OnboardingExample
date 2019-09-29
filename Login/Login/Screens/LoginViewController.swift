@@ -9,12 +9,12 @@
 import Core
 import UIKit
 
-class LoginViewController: UIViewController, Coordinable {
+class LoginViewController: UIViewController, Routable {
     @IBOutlet var userTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var loginButton: UIButton!
 
-    var coordinator: Coordinator?
+    var router: Router?
 
     init() {
         super.init(nibName: "LoginViewController", bundle: Bundle(for: LoginViewController.self))
@@ -26,6 +26,6 @@ class LoginViewController: UIViewController, Coordinable {
     }
 
     @IBAction func loginButtonPressed(_: UIButton) {
-        self.coordinator?.route(to: LoginRoutes.nextView, animated: true)
+        self.router?.route(to: LoginRoutes.nextView, animated: true)
     }
 }

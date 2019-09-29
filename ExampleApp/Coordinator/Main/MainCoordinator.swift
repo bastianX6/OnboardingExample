@@ -14,8 +14,8 @@ enum MainRoutes: NavigationRoute {
     case logout
 }
 
-final class MainCoordinator: Coordinator {
-    var rootCoordinator: Coordinator?
+final class MainCoordinator: RoutableCoordinator {
+    var rootCoordinator: RoutableCoordinator?
     weak var rootViewController: UIViewController?
 
     init(rootViewController: UIViewController) {

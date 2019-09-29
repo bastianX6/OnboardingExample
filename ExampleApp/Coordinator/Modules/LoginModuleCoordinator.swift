@@ -10,8 +10,8 @@ import Core
 import Login
 import UIKit
 
-final class LoginModuleCoordinator: Coordinator {
-    var rootCoordinator: Coordinator?
+final class LoginModuleCoordinator: RoutableCoordinator {
+    var rootCoordinator: RoutableCoordinator?
     var rootViewController: UIViewController?
 
     init(rootViewController: UIViewController) {
