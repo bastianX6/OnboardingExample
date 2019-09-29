@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PushPermissionViewController" customModule="Permissions" customModuleProvider="target">
+            <connections>
+                <outlet property="acceptPermissionButton" destination="0e6-xi-eNm" id="2dd-En-sMj"/>
+                <outlet property="rejectPermissionButton" destination="4oJ-Vn-aKV" id="gcJ-aE-Hur"/>
+                <outlet property="textLabel" destination="esp-We-2SF" id="LcE-U1-Csw"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Push notifications permission" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esp-We-2SF">
+                    <rect key="frame" x="20" y="337.5" width="374" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0e6-xi-eNm">
+                    <rect key="frame" x="20" y="398.5" width="374" height="30"/>
+                    <state key="normal" title="Accept"/>
+                    <connections>
+                        <action selector="didAcceptPermisson:" destination="-1" eventType="touchUpInside" id="eQ2-CC-Fcd"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4oJ-Vn-aKV">
+                    <rect key="frame" x="20" y="448.5" width="374" height="30"/>
+                    <state key="normal" title="Reject"/>
+                    <connections>
+                        <action selector="didRejectPermisson:" destination="-1" eventType="touchUpInside" id="9lE-aI-47U"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="4oJ-Vn-aKV" firstAttribute="top" secondItem="0e6-xi-eNm" secondAttribute="bottom" constant="20" id="23E-Sp-d6R"/>
+                <constraint firstItem="esp-We-2SF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="5Nb-gJ-xhF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4oJ-Vn-aKV" secondAttribute="trailing" constant="20" id="5tb-Nu-T0I"/>
+                <constraint firstItem="0e6-xi-eNm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="CtW-fQ-7fd"/>
+                <constraint firstItem="esp-We-2SF" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-100" id="E74-EZ-KjD"/>
+                <constraint firstItem="esp-We-2SF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="FhF-TS-Ui9"/>
+                <constraint firstItem="0e6-xi-eNm" firstAttribute="top" secondItem="esp-We-2SF" secondAttribute="bottom" constant="40" id="JBV-mB-Ai6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0e6-xi-eNm" secondAttribute="trailing" constant="20" id="Vnl-mM-Kfq"/>
+                <constraint firstItem="4oJ-Vn-aKV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="gn4-cW-5Se"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="esp-We-2SF" secondAttribute="trailing" constant="20" id="oys-dR-WjI"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="153"/>
+        </view>
+    </objects>
+</document>

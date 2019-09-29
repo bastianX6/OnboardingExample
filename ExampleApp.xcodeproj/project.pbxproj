@@ -19,6 +19,8 @@
 		03983755233D83D500A60862 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03983724233D7DDF00A60862 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		03983759233D841500A60862 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03983758233D841500A60862 /* MainCoordinator.swift */; };
 		0398375C233D847500A60862 /* LoginModuleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0398375B233D847500A60862 /* LoginModuleCoordinator.swift */; };
+		03A724C32341506900270633 /* Permissions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03983709233D7C8900A60862 /* Permissions.framework */; };
+		03A724C42341506900270633 /* Permissions.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03983709233D7C8900A60862 /* Permissions.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				03983752233D83C800A60862 /* Login.framework in Embed Frameworks */,
+				03A724C42341506900270633 /* Permissions.framework in Embed Frameworks */,
 				03983755233D83D500A60862 /* Core.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -90,6 +93,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03983751233D83C800A60862 /* Login.framework in Frameworks */,
+				03A724C32341506900270633 /* Permissions.framework in Frameworks */,
 				03983754233D83D500A60862 /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
