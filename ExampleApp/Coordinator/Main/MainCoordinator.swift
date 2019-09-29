@@ -12,6 +12,7 @@ import UIKit
 enum MainRoutes: NavigationRoute {
     case onboarding
     case logout
+    case permissions
 }
 
 final class MainCoordinator: RoutableCoordinator {
@@ -42,6 +43,18 @@ final class MainCoordinator: RoutableCoordinator {
             break
         case .logout:
             break
+        case .permissions:
+            self.routeToPermissions()
         }
+    }
+
+    private func routeToPermissions() {
+        guard let rootViewController = self.rootViewController else {
+            preconditionFailure("RootViewController is nil")
+        }
+
+        let coordinator = PermissionsModuleCoordinator(rootViewController: rootViewController)
+        coordinator.rootCoordinator = self
+        coordinator.start {}
     }
 }

@@ -33,9 +33,11 @@ class LocationPermissionViewController: UIViewController, Routable, PermissionsS
 
     @IBAction func didAcceptPermisson(_: UIButton) {
         PermissionUtils.setPermissionStatus(enabled: true, permission: .location)
+        self.router?.route(to: PermissionsRoutes.photos, animated: true)
     }
 
     @IBAction func didRejectPermisson(_: UIButton) {
         PermissionUtils.setPermissionStatus(enabled: false, permission: .location)
+        self.router?.route(to: PermissionsRoutes.photos, animated: true)
     }
 }

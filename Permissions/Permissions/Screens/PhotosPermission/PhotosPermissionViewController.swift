@@ -32,9 +32,11 @@ class PhotosPermissionViewController: UIViewController, Routable, PermissionsScr
 
     @IBAction func didAcceptPermisson(_: UIButton) {
         PermissionUtils.setPermissionStatus(enabled: true, permission: .photos)
+        self.router?.route(to: PermissionsRoutes.nextFlow, animated: true)
     }
 
     @IBAction func didRejectPermisson(_: UIButton) {
         PermissionUtils.setPermissionStatus(enabled: false, permission: .photos)
+        self.router?.route(to: PermissionsRoutes.nextFlow, animated: true)
     }
 }

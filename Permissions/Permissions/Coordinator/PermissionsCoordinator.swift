@@ -16,25 +16,62 @@ enum PermissionsRoutes: NavigationRoute {
     case nextFlow
 }
 
-final class PermissionsCoordinator: RoutableCoordinator {
-    var rootCoordinator: RoutableCoordinator?
-    var rootViewController: UIViewController?
+public enum PermissionsExternalRoutes: NavigationRoute {
+    case nextFlow
+}
+
+public final class PermissionsCoordinator: RoutableCoordinator {
+    private var permissions: [PermissionsRoutes] = [.push, .location, .photos]
+
+    public var rootCoordinator: RoutableCoordinator?
+    public var rootViewController: UIViewController?
 
     private var navigationController: UINavigationController? {
         return self.rootViewController as? UINavigationController
     }
 
-    func start(_ completion: @escaping () -> Void) {
+    public init(rootCoordinator: RoutableCoordinator, rootViewController: UIViewController) {
+        self.rootCoordinator = rootCoordinator
+        self.rootViewController = rootViewController
+    }
+
+    public func start(_ completion: @escaping () -> Void) {
         let welcomeVC = PermissionsWelcomeViewController()
         welcomeVC.router = self
         self.navigationController?.setViewControllers([welcomeVC], animated: true)
         completion()
     }
 
-    func route(to navigationRoute: NavigationRoute, animated: Bool) {
+    public func route(to navigationRoute: NavigationRoute, animated: Bool) {
         guard let route = navigationRoute as? PermissionsRoutes else {
             preconditionFailure("navigationRoute must be a PermissionsRoutes value")
         }
+
+        switch route {
+        case .push:
+            if !PermissionUtils.permissionIsAllowed(.push) {
+                self.routeToPermissonRoute(route: route, animated: animated)
+            } else {
+                self.route(to: PermissionsRoutes.location, animated: animated)
+            }
+        case .location:
+            if !PermissionUtils.permissionIsAllowed(.location) {
+                self.routeToPermissonRoute(route: route, animated: animated)
+            } else {
+                self.route(to: PermissionsRoutes.photos, animated: animated)
+            }
+        case .photos:
+            if !PermissionUtils.permissionIsAllowed(.photos) {
+                self.routeToPermissonRoute(route: route, animated: animated)
+            } else {
+                self.rootCoordinator?.route(to: PermissionsExternalRoutes.nextFlow, animated: animated)
+            }
+        case .nextFlow:
+            break
+        }
+    }
+
+    private func routeToPermissonRoute(route: PermissionsRoutes, animated: Bool) {
         switch route {
         case .push:
             let pushVC = PushPermissionViewController()

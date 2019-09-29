@@ -33,9 +33,11 @@ class PushPermissionViewController: UIViewController, Routable, PermissionsScree
 
     @IBAction func didAcceptPermisson(_: UIButton) {
         PermissionUtils.setPermissionStatus(enabled: true, permission: .push)
+        self.router?.route(to: PermissionsRoutes.location, animated: true)
     }
 
     @IBAction func didRejectPermisson(_: UIButton) {
         PermissionUtils.setPermissionStatus(enabled: false, permission: .push)
+        self.router?.route(to: PermissionsRoutes.location, animated: true)
     }
 }

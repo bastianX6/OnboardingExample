@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0308FBC323415A2A003FB0CA /* PermissionsModuleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0308FBC223415A2A003FB0CA /* PermissionsModuleCoordinator.swift */; };
 		039836C1233D7A9000A60862 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039836C0233D7A9000A60862 /* AppDelegate.swift */; };
 		039836C3233D7A9000A60862 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039836C2233D7A9000A60862 /* SceneDelegate.swift */; };
 		039836C5233D7A9000A60862 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039836C4233D7A9000A60862 /* ViewController.swift */; };
@@ -71,6 +72,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0308FBC223415A2A003FB0CA /* PermissionsModuleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsModuleCoordinator.swift; sourceTree = "<group>"; };
 		039836BD233D7A9000A60862 /* ExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		039836C0233D7A9000A60862 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		039836C2233D7A9000A60862 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				0398375B233D847500A60862 /* LoginModuleCoordinator.swift */,
+				0308FBC223415A2A003FB0CA /* PermissionsModuleCoordinator.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				0398375C233D847500A60862 /* LoginModuleCoordinator.swift in Sources */,
 				039836C5233D7A9000A60862 /* ViewController.swift in Sources */,
 				03983759233D841500A60862 /* MainCoordinator.swift in Sources */,
+				0308FBC323415A2A003FB0CA /* PermissionsModuleCoordinator.swift in Sources */,
 				039836C1233D7A9000A60862 /* AppDelegate.swift in Sources */,
 				039836C3233D7A9000A60862 /* SceneDelegate.swift in Sources */,
 			);

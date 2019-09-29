@@ -21,7 +21,7 @@ enum PermissionUtils {
         self.standardDefaults?.set(enabled, forKey: permission.rawValue)
     }
 
-    static func getPermissionStatus(permission: Permission) -> Bool {
+    static func permissionIsAllowed(_ permission: Permission) -> Bool {
         return self.standardDefaults?.bool(forKey: permission.rawValue) ?? false
     }
 }
