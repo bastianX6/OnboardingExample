@@ -25,6 +25,9 @@
 		03A724C32341506900270633 /* Permissions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03983709233D7C8900A60862 /* Permissions.framework */; };
 		03A724C42341506900270633 /* Permissions.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03983709233D7C8900A60862 /* Permissions.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		03ECDB8923416B5B000F564D /* DashboardModuleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03ECDB8823416B5B000F564D /* DashboardModuleCoordinator.swift */; };
+		03ECDBAF23416EA2000F564D /* TermsAndConditions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03ECDBA923416E67000F564D /* TermsAndConditions.framework */; };
+		03ECDBB023416EA2000F564D /* TermsAndConditions.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03ECDBA923416E67000F564D /* TermsAndConditions.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		03ECDBBD234175EE000F564D /* TermsAndConditionsModuleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03ECDBBC234175EE000F564D /* TermsAndConditionsModuleCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,13 @@
 			remoteGlobalIDString = 0398372F233D7E1B00A60862;
 			remoteInfo = Login;
 		};
+		03ECDBA823416E67000F564D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03ECDBA423416E66000F564D /* TermsAndConditions.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 03ECDB9923416E66000F564D;
+			remoteInfo = TermsAndConditions;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -75,6 +85,7 @@
 				03983752233D83C800A60862 /* Login.framework in Embed Frameworks */,
 				03A724C42341506900270633 /* Permissions.framework in Embed Frameworks */,
 				03983755233D83D500A60862 /* Core.framework in Embed Frameworks */,
+				03ECDBB023416EA2000F564D /* TermsAndConditions.framework in Embed Frameworks */,
 				0308FBE923416842003FB0CA /* Dashboard.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -100,6 +111,8 @@
 		03983758233D841500A60862 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		0398375B233D847500A60862 /* LoginModuleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModuleCoordinator.swift; sourceTree = "<group>"; };
 		03ECDB8823416B5B000F564D /* DashboardModuleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardModuleCoordinator.swift; sourceTree = "<group>"; };
+		03ECDBA423416E66000F564D /* TermsAndConditions.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TermsAndConditions.xcodeproj; path = TermsAndConditions/TermsAndConditions.xcodeproj; sourceTree = "<group>"; };
+		03ECDBBC234175EE000F564D /* TermsAndConditionsModuleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsModuleCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +123,7 @@
 				03983751233D83C800A60862 /* Login.framework in Frameworks */,
 				03A724C32341506900270633 /* Permissions.framework in Frameworks */,
 				03983754233D83D500A60862 /* Core.framework in Frameworks */,
+				03ECDBAF23416EA2000F564D /* TermsAndConditions.framework in Frameworks */,
 				0308FBE823416842003FB0CA /* Dashboard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,6 +142,7 @@
 		039836B4233D7A9000A60862 = {
 			isa = PBXGroup;
 			children = (
+				03ECDBA423416E66000F564D /* TermsAndConditions.xcodeproj */,
 				0308FBDD234166C6003FB0CA /* Dashboard.xcodeproj */,
 				0398373A233D7E1B00A60862 /* Login.xcodeproj */,
 				0398371F233D7DDE00A60862 /* Core.xcodeproj */,
@@ -224,8 +239,17 @@
 				0398375B233D847500A60862 /* LoginModuleCoordinator.swift */,
 				0308FBC223415A2A003FB0CA /* PermissionsModuleCoordinator.swift */,
 				03ECDB8823416B5B000F564D /* DashboardModuleCoordinator.swift */,
+				03ECDBBC234175EE000F564D /* TermsAndConditionsModuleCoordinator.swift */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		03ECDBA523416E66000F564D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				03ECDBA923416E67000F564D /* TermsAndConditions.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +320,10 @@
 					ProductGroup = 03983705233D7C8900A60862 /* Products */;
 					ProjectRef = 03983704233D7C8900A60862 /* Permissions.xcodeproj */;
 				},
+				{
+					ProductGroup = 03ECDBA523416E66000F564D /* Products */;
+					ProjectRef = 03ECDBA423416E66000F564D /* TermsAndConditions.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -340,6 +368,13 @@
 			remoteRef = 0398373E233D7E1C00A60862 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		03ECDBA923416E67000F564D /* TermsAndConditions.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TermsAndConditions.framework;
+			remoteRef = 03ECDBA823416E67000F564D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -366,6 +401,7 @@
 				03983759233D841500A60862 /* MainCoordinator.swift in Sources */,
 				0308FBC323415A2A003FB0CA /* PermissionsModuleCoordinator.swift in Sources */,
 				039836C1233D7A9000A60862 /* AppDelegate.swift in Sources */,
+				03ECDBBD234175EE000F564D /* TermsAndConditionsModuleCoordinator.swift in Sources */,
 				039836C3233D7A9000A60862 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

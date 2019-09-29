@@ -14,6 +14,7 @@ enum MainRoutes: NavigationRoute {
     case logout
     case permissions
     case dashboard
+    case termsAndConditions
 }
 
 final class MainCoordinator: RoutableCoordinator {
@@ -48,6 +49,8 @@ final class MainCoordinator: RoutableCoordinator {
             self.routeToPermissions()
         case .dashboard:
             self.routeToDashboard()
+        case .termsAndConditions:
+            self.routeToTermsAndConditions()
         }
     }
 
@@ -77,5 +80,14 @@ final class MainCoordinator: RoutableCoordinator {
         let dashboardCoordinator = DashboardModuleCoordinator(rootViewController: rootViewController)
         dashboardCoordinator.rootCoordinator = self
         dashboardCoordinator.start {}
+    }
+
+    private func routeToTermsAndConditions() {
+        guard let rootViewController = self.rootViewController else {
+            preconditionFailure("RootViewController is nil")
+        }
+        let termsCoordinator = TermsAndConditionsModuleCoordinator(rootViewController: rootViewController)
+        termsCoordinator.rootCoordinator = self
+        termsCoordinator.start {}
     }
 }

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TermsAndConditionsViewController" customModule="TermsAndConditions" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pod-zF-0nP">
+                    <rect key="frame" x="20" y="64" width="374" height="678"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in mi libero. Sed egestas risus vitae odio finibus, et vehicula tortor semper. Morbi vulputate, neque ac accumsan auctor, nisl justo egestas tellus, eu rhoncus arcu tellus id justo. Nullam vel mauris tempus, varius leo et, dignissim lorem. Donec lorem sapien, sodales sit amet ante eu, faucibus ullamcorper risus. In accumsan, lorem vel ullamcorper imperdiet, ex felis rhoncus neque, ut viverra lorem leo ac est. Nunc pellentesque pretium ante. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer bibendum nisi congue nisl ornare rhoncus. Donec suscipit lobortis magna ac tempor. Sed suscipit, urna sit amet ultricies commodo, leo nisi convallis metus, interdum rutrum neque mi vitae est. Praesent ut erat lacus. Mauris volutpat erat imperdiet sem laoreet, vel venenatis purus commodo.
+
+Maecenas eget mattis magna. Quisque rutrum pellentesque convallis. Nullam luctus quam sit amet tristique elementum. Quisque dictum urna eget congue fringilla. Etiam vitae porta neque. Vestibulum ut orci quam. Nulla vitae quam lacinia, fringilla lorem at, ullamcorper ipsum. Etiam et malesuada felis. Etiam iaculis lobortis dictum. Vestibulum ornare tortor eget dui venenatis malesuada. Fusce fringilla commodo rutrum. Sed ultricies arcu erat, vel tincidunt est eleifend vel. Cras quis aliquam ipsum. Sed vitae augue nec lacus consectetur interdum.
+
+Vivamus eget leo auctor, tempor turpis sed, elementum dolor. Suspendisse sed velit ex. Suspendisse non blandit nulla. Ut iaculis ligula sit amet lobortis dignissim. Phasellus suscipit ultrices nibh vitae aliquam. Curabitur molestie diam eu luctus eleifend. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vestibulum tempor gravida. Curabitur accumsan auctor felis, non aliquam eros commodo dapibus. Duis lacinia nisi libero, vel ullamcorper ipsum rhoncus sit amet.
+
+Vivamus suscipit sollicitudin tellus et varius. Fusce maximus imperdiet tempus. Integer tincidunt, mi sit amet tempor vehicula, urna lectus sagittis mauris, sit amet volutpat odio enim in diam. Nulla ornare libero et dolor hendrerit vestibulum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla finibus sapien id erat tristique, nec faucibus orci tempor. Suspendisse porta urna vel orci posuere, in egestas enim tincidunt. Cras rutrum ante vitae libero mollis sollicitudin. Fusce feugiat nisl in odio tincidunt facilisis. Morbi semper nec massa nec pellentesque. Sed auctor molestie lacinia. Nam porttitor aliquam suscipit. Donec interdum mauris mi, quis lobortis lectus dignissim non. Vivamus in erat vitae odio rhoncus tincidunt.
+
+Suspendisse laoreet diam nec ex scelerisque luctus vitae nec dolor. Aliquam vel erat consequat, elementum enim hendrerit, laoreet magna. Cras dui diam, interdum et eros et, ullamcorper pretium lectus. Aliquam erat volutpat. Sed blandit consectetur faucibus. Phasellus id semper nisi. Proin sagittis, mauris eu feugiat ullamcorper, quam leo rutrum est, nec dictum odio dolor maximus felis. Duis finibus suscipit augue et consectetur. </mutableString>
+                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nf-6f-CAW">
+                    <rect key="frame" x="20" y="762" width="374" height="30"/>
+                    <state key="normal" title="Accept"/>
+                    <connections>
+                        <action selector="didAceptTermsAndConditions:" destination="-1" eventType="touchUpInside" id="JY6-30-Kqc"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oe3-Lu-PVU">
+                    <rect key="frame" x="20" y="812" width="374" height="30"/>
+                    <state key="normal" title="Reject"/>
+                    <connections>
+                        <action selector="didRejectTermsAndConditions:" destination="-1" eventType="touchUpInside" id="cdz-D1-DzB"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="6nf-6f-CAW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="3us-oO-Kjo"/>
+                <constraint firstItem="pod-zF-0nP" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="EEV-k0-E3o"/>
+                <constraint firstItem="pod-zF-0nP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="MqL-o1-j5x"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Oe3-Lu-PVU" secondAttribute="bottom" constant="20" id="NXI-59-hWb"/>
+                <constraint firstItem="Oe3-Lu-PVU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Qfq-oB-vCA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Oe3-Lu-PVU" secondAttribute="trailing" constant="20" id="YIq-ac-U51"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6nf-6f-CAW" secondAttribute="trailing" constant="20" id="cJw-0k-NQy"/>
+                <constraint firstItem="Oe3-Lu-PVU" firstAttribute="top" secondItem="6nf-6f-CAW" secondAttribute="bottom" constant="20" id="czD-xD-dgO"/>
+                <constraint firstItem="6nf-6f-CAW" firstAttribute="top" secondItem="pod-zF-0nP" secondAttribute="bottom" constant="20" id="lCk-el-TYK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pod-zF-0nP" secondAttribute="trailing" constant="20" id="lb1-yv-RiQ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="153"/>
+        </view>
+    </objects>
+</document>
