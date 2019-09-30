@@ -71,7 +71,7 @@ public final class OnboardingCoordinator: RoutableCoordinator {
 
         let nextCoordinator = self.coordinators.removeFirst()
         if nextCoordinator.canSkip {
-            self.rootCoordinator?.route(to: OnboardingExternalRoutes.flowEnd, animated: animated)
+            self.startNextCoordinator(animated: animated)
         } else {
             nextCoordinator.start {}
         }
