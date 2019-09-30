@@ -36,7 +36,7 @@ final class LoginModuleCoordinator: RoutableCoordinator {
 
         switch loginRoute {
         case .onboarding:
-            self.rootCoordinator?.route(to: MainRoutes.termsAndConditions, animated: animated)
+            self.rootCoordinator?.route(to: MainRoutes.onboarding, animated: animated)
         }
     }
 }

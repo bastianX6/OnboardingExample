@@ -7,13 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03024FD023417E2B001564EA /* Permissions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03024FCE23417E2B001564EA /* Permissions.framework */; };
+		03024FD123417E2B001564EA /* Permissions.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03024FCE23417E2B001564EA /* Permissions.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		03024FD223417E2B001564EA /* TermsAndConditions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03024FCF23417E2B001564EA /* TermsAndConditions.framework */; };
+		03024FD323417E2B001564EA /* TermsAndConditions.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03024FCF23417E2B001564EA /* TermsAndConditions.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		039836E3233D7C3800A60862 /* Onboarding.h in Headers */ = {isa = PBXBuildFile; fileRef = 039836E1233D7C3800A60862 /* Onboarding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		03ECDBC423417D11000F564D /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03ECDBC323417D11000F564D /* Core.framework */; };
+		03ECDBC523417D11000F564D /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03ECDBC323417D11000F564D /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		03ECDBCA23417D4F000F564D /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03ECDBC923417D4F000F564D /* OnboardingCoordinator.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		03ECDBC623417D11000F564D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				03ECDBC523417D11000F564D /* Core.framework in Embed Frameworks */,
+				03024FD123417E2B001564EA /* Permissions.framework in Embed Frameworks */,
+				03024FD323417E2B001564EA /* TermsAndConditions.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		03024FCB23417E05001564EA /* Login.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Login.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		03024FCE23417E2B001564EA /* Permissions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Permissions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		03024FCF23417E2B001564EA /* TermsAndConditions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TermsAndConditions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		039836DE233D7C3800A60862 /* Onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		039836E1233D7C3800A60862 /* Onboarding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Onboarding.h; sourceTree = "<group>"; };
 		039836E2233D7C3800A60862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03ECDBC323417D11000F564D /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		03ECDBC923417D4F000F564D /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,6 +49,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03ECDBC423417D11000F564D /* Core.framework in Frameworks */,
+				03024FD023417E2B001564EA /* Permissions.framework in Frameworks */,
+				03024FD223417E2B001564EA /* TermsAndConditions.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,6 +63,7 @@
 			children = (
 				039836E0233D7C3800A60862 /* Onboarding */,
 				039836DF233D7C3800A60862 /* Products */,
+				03ECDBC223417D11000F564D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -46,10 +78,30 @@
 		039836E0233D7C3800A60862 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				03ECDBBF23417BA3000F564D /* Coordinator */,
 				039836E1233D7C3800A60862 /* Onboarding.h */,
 				039836E2233D7C3800A60862 /* Info.plist */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		03ECDBBF23417BA3000F564D /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				03ECDBC923417D4F000F564D /* OnboardingCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		03ECDBC223417D11000F564D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03024FCE23417E2B001564EA /* Permissions.framework */,
+				03024FCF23417E2B001564EA /* TermsAndConditions.framework */,
+				03024FCB23417E05001564EA /* Login.framework */,
+				03ECDBC323417D11000F564D /* Core.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +126,7 @@
 				039836DA233D7C3800A60862 /* Sources */,
 				039836DB233D7C3800A60862 /* Frameworks */,
 				039836DC233D7C3800A60862 /* Resources */,
+				03ECDBC623417D11000F564D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -95,6 +148,7 @@
 				TargetAttributes = {
 					039836DD233D7C3800A60862 = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
 					};
 				};
 			};
@@ -131,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03ECDBCA23417D4F000F564D /* OnboardingCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +315,7 @@
 		039836E7233D7C3800A60862 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 48L72N5ZP6;
@@ -276,6 +332,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = bastianx6.Onboarding;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -284,6 +341,7 @@
 		039836E8233D7C3800A60862 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 48L72N5ZP6;

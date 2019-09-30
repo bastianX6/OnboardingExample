@@ -42,7 +42,7 @@ final class MainCoordinator: RoutableCoordinator {
         }
         switch mainRoute {
         case .onboarding:
-            break
+            self.routeToOnboarding()
         case .logout:
             self.routeToLogin()
         case .permissions:
@@ -89,5 +89,14 @@ final class MainCoordinator: RoutableCoordinator {
         let termsCoordinator = TermsAndConditionsModuleCoordinator(rootViewController: rootViewController)
         termsCoordinator.rootCoordinator = self
         termsCoordinator.start {}
+    }
+
+    private func routeToOnboarding() {
+        guard let rootViewController = self.rootViewController else {
+            preconditionFailure("RootViewController is nil")
+        }
+        let onboardingCoordinator = OnboardingModuleCoordinator(rootViewController: rootViewController)
+        onboardingCoordinator.rootCoordinator = self
+        onboardingCoordinator.start {}
     }
 }

@@ -20,8 +20,10 @@ public enum PermissionsExternalRoutes: NavigationRoute {
     case nextFlow
 }
 
-public final class PermissionsCoordinator: RoutableCoordinator {
-    private var permissions: [PermissionsRoutes] = [.push, .location, .photos]
+public final class PermissionsCoordinator: OnboardingEnabledCoordinator {
+    public var canSkip: Bool {
+        return PermissionUtils.permissionIsAllowed(.push) && PermissionUtils.permissionIsAllowed(.location) && PermissionUtils.permissionIsAllowed(.photos)
+    }
 
     public var rootCoordinator: RoutableCoordinator?
     public weak var rootViewController: UIViewController?
@@ -64,10 +66,10 @@ public final class PermissionsCoordinator: RoutableCoordinator {
             if !PermissionUtils.permissionIsAllowed(.photos) {
                 self.routeToPermissonRoute(route: route, animated: animated)
             } else {
-                self.rootCoordinator?.route(to: PermissionsExternalRoutes.nextFlow, animated: animated)
+                self.route(to: PermissionsRoutes.nextFlow, animated: animated)
             }
         case .nextFlow:
-            break
+            self.rootCoordinator?.route(to: PermissionsExternalRoutes.nextFlow, animated: animated)
         }
     }
 

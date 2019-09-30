@@ -21,7 +21,11 @@ public enum TermsAndConditionsExternalRoutes: NavigationRoute {
     case nextFlow
 }
 
-public final class TermsAndConditionsCoordinator: RoutableCoordinator {
+public final class TermsAndConditionsCoordinator: OnboardingEnabledCoordinator {
+    public var canSkip: Bool {
+        return TermsAndConditionsUtils.termsAndConditionIsAccepted(.accepted)
+    }
+
     public var rootCoordinator: RoutableCoordinator?
     public weak var rootViewController: UIViewController?
 

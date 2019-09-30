@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03024FD523418367001564EA /* OnboardingModuleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03024FD423418367001564EA /* OnboardingModuleCoordinator.swift */; };
 		0308FBC323415A2A003FB0CA /* PermissionsModuleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0308FBC223415A2A003FB0CA /* PermissionsModuleCoordinator.swift */; };
 		0308FBE823416842003FB0CA /* Dashboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0308FBE2234166C7003FB0CA /* Dashboard.framework */; };
 		0308FBE923416842003FB0CA /* Dashboard.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0308FBE2234166C7003FB0CA /* Dashboard.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -28,6 +29,8 @@
 		03ECDBAF23416EA2000F564D /* TermsAndConditions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03ECDBA923416E67000F564D /* TermsAndConditions.framework */; };
 		03ECDBB023416EA2000F564D /* TermsAndConditions.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03ECDBA923416E67000F564D /* TermsAndConditions.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		03ECDBBD234175EE000F564D /* TermsAndConditionsModuleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03ECDBBC234175EE000F564D /* TermsAndConditionsModuleCoordinator.swift */; };
+		03ECDBC723417D31000F564D /* Onboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039836EE233D7C3900A60862 /* Onboarding.framework */; };
+		03ECDBC823417D31000F564D /* Onboarding.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 039836EE233D7C3900A60862 /* Onboarding.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +86,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				03983752233D83C800A60862 /* Login.framework in Embed Frameworks */,
+				03ECDBC823417D31000F564D /* Onboarding.framework in Embed Frameworks */,
 				03A724C42341506900270633 /* Permissions.framework in Embed Frameworks */,
 				03983755233D83D500A60862 /* Core.framework in Embed Frameworks */,
 				03ECDBB023416EA2000F564D /* TermsAndConditions.framework in Embed Frameworks */,
@@ -94,6 +98,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		03024FD423418367001564EA /* OnboardingModuleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModuleCoordinator.swift; sourceTree = "<group>"; };
 		0308FBC223415A2A003FB0CA /* PermissionsModuleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsModuleCoordinator.swift; sourceTree = "<group>"; };
 		0308FBDD234166C6003FB0CA /* Dashboard.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Dashboard.xcodeproj; path = Dashboard/Dashboard.xcodeproj; sourceTree = "<group>"; };
 		039836BD233D7A9000A60862 /* ExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03983751233D83C800A60862 /* Login.framework in Frameworks */,
+				03ECDBC723417D31000F564D /* Onboarding.framework in Frameworks */,
 				03A724C32341506900270633 /* Permissions.framework in Frameworks */,
 				03983754233D83D500A60862 /* Core.framework in Frameworks */,
 				03ECDBAF23416EA2000F564D /* TermsAndConditions.framework in Frameworks */,
@@ -240,6 +246,7 @@
 				0308FBC223415A2A003FB0CA /* PermissionsModuleCoordinator.swift */,
 				03ECDB8823416B5B000F564D /* DashboardModuleCoordinator.swift */,
 				03ECDBBC234175EE000F564D /* TermsAndConditionsModuleCoordinator.swift */,
+				03024FD423418367001564EA /* OnboardingModuleCoordinator.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -400,6 +407,7 @@
 				039836C5233D7A9000A60862 /* ViewController.swift in Sources */,
 				03983759233D841500A60862 /* MainCoordinator.swift in Sources */,
 				0308FBC323415A2A003FB0CA /* PermissionsModuleCoordinator.swift in Sources */,
+				03024FD523418367001564EA /* OnboardingModuleCoordinator.swift in Sources */,
 				039836C1233D7A9000A60862 /* AppDelegate.swift in Sources */,
 				03ECDBBD234175EE000F564D /* TermsAndConditionsModuleCoordinator.swift in Sources */,
 				039836C3233D7A9000A60862 /* SceneDelegate.swift in Sources */,
